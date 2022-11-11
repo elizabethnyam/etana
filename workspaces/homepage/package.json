@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "homepage",
+  "description": "Identity Box homepage",
+  "version": "0.1.39",
+  "author": "Marcin Czenko <marcin@everydayproductive.com>",
+  "engines": {
+    "node": "14.x"
+  },
+  "homepage": "https://idbox.online",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/identity-box/identity-box.git"
+  },
+  "dependencies": {
+    "@confluenza/gatsby-theme-confluenza": "^1.0.40",
+    "gatsby": "^4.21.1",
+    "gatsby-plugin-provide-react": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-media": "^1.10.0"
+  },
+  "keywords": [
+    "gatsby",
+    "confluenza",
+    "markdown"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "eslint-config-react-app": "^7.0.1",
+    "gatsby-cli": "^4.21.0",
+    "gatsby-plugin-root-import": "^2.0.8"
+  }
+}
