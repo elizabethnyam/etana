@@ -1,0 +1,36 @@
+{
+  "name": "@identity-box/utils",
+  "version": "0.1.39",
+  "description": "Common utils for building Identity Box services",
+  "exports": "./source/index.js",
+  "type": "module",
+  "files": [
+    "source"
+  ],
+  "keywords": [
+    "identity-bix",
+    "utils"
+  ],
+  "author": "Marcin Czenko",
+  "license": "ISC",
+  "homepage": "https://idbox.online/utils",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/identity-box/identity-box.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@node-ipc/node-ipc": "^11.0.3",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "base64url": "^3.0.1",
+    "tweetnacl": "^1.0.3"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "hush-hush",
+  "private": true,
+  "version": "0.1.39",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@identity-box/idbox-react-ui": "^0.1.39",
+    "@identity-box/rendezvous-client": "^0.1.39",
+    "@react-frontend-developer/buffers": "^2.0.1",
+    "base64url": "^3.0.1",
+    "buffer": "^6.0.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.3",
+    "tailwind-merge": "^1.6.0",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.0.9"
+  }
+}
