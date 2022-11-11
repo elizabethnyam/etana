@@ -1,0 +1,35 @@
+{
+  "name": "@identity-box/cli-tools",
+  "version": "0.1.39",
+  "description": "Some handy CLI Tools",
+  "type": "module",
+  "keywords": [
+    "Identity Box",
+    "CLI",
+    "tools",
+    "got",
+    "ipfs-http-client"
+  ],
+  "author": "Marcin Czenko",
+  "license": "ISC",
+  "homepage": "https://idbox.online",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/identity-box/identity-box.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "cids": "1.1.9",
+    "commander": "^9.4.0",
+    "esm": "^3.2.25",
+    "got": "^12.3.1",
+    "ipfs-http-client": "^57.0.3",
+    "ipfs-pubsub-room": "^3.0.0",
+    "multiformats": "^9.7.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

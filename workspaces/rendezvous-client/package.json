@@ -1,0 +1,33 @@
+{
+  "name": "@identity-box/rendezvous-client",
+  "version": "0.1.39",
+  "description": "Client library for connecting to the Rendezvous service",
+  "type": "module",
+  "exports": "./source/index.js",
+  "main": "./source/index.js",
+  "files": [
+    "source"
+  ],
+  "keywords": [
+    "identity-box"
+  ],
+  "author": "Marcin Czenko",
+  "license": "ISC",
+  "homepage": "https://idbox.online/components/rendezvous-client",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/identity-box/identity-box.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@react-frontend-developer/buffers": "^2.0.1",
+    "base64url": "^3.0.1",
+    "socket.io-client": "^4.5.1",
+    "tweetnacl": "^1.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
