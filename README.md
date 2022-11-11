@@ -1,5 +1,5 @@
-# Identity Box
+# Etana
 
-Identity Box aims at bringing the power of decentralized web to the user. Identity Box is all about data, security, and privacy.
+Etana aims at to bring the power of financial inclusion to women in low resource environments. We prioritize data, security, and, privacy.
 
-Feel free to consult our [documentation](https://idbox.online/identity-box).
+Feel free to visit our [website](https:www.etana.us).
