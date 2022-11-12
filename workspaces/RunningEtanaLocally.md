@@ -156,7 +156,7 @@ $ yarn start --clear
 This will open a page in a browser, where you can find a QR Code (it should also show up in the terminal).
 Make sure that you have the _Expo_ app installed on your mobile, and then scan the QR Code directly from the Expo app or with the camera on your mobile - it should present you with an option to open the Expo app.
 
-The Identity App app should start and now you can follow the steps from [Experience Identity Box](/experience-identity-box) to test that your setup is working correctly.
+The Identity App app should start.
 
 ## Appendix - IPNS with Firebase
 
