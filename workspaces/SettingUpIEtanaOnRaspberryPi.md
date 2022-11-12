@@ -1,11 +1,11 @@
 ---
 path: /developers/idbox-raspberry-pi
-title: Identity Box on Raspberry Pi
+title: Etana on Raspberry Pi
 tag: developer
 sortIndex: 30
 ---
 
-RaspberryPi is a reliable, powerful, and cost-effective platform that can be used to run Identity Box. In this document we describe how to setup a an Identity Box on Raspberry Pi. We will be using [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) with 4GB RAM. Please follow the standard instructions at [Setting up your Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up) and make sure you [enable ssh access](https://www.raspberrypi.org/documentation/remote-access/ssh/). [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) comes with git already installed.
+RaspberryPi is a reliable, powerful, and cost-effective platform that can be used to run EtN. In this document we describe how to setup a EtN on Raspberry Pi. We will be using [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) with 4GB RAM. Please follow the standard instructions at [Setting up your Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up) and make sure you [enable ssh access](https://www.raspberrypi.org/documentation/remote-access/ssh/). [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) comes with git already installed.
 
 ## Install Node.js and yarn
 
@@ -59,7 +59,7 @@ This will install, initialize, and start IPFS. We need to alter configuration a 
 $ sudo systemctl stop ipfs-daemon.service
 ```
 
-The `ipfs-deamon.service` uses `/usr/local/bin/ipfs daemon --migrate` to start ipfs. For our Identity Box, we need
+The `ipfs-deamon.service` uses `/usr/local/bin/ipfs daemon --migrate` to start ipfs. For Etana, we need
 a different startup command:
 
 ```bash
@@ -323,7 +323,7 @@ For reference, below is the whole `~/.ipfs/config`:
 }
 ```
 
-Also make sure you open port `4001` and map it to your Identity Box IP address so that it is accessible from outside. For this please refer to your ISP router settings.
+Also make sure you open port `4001` and map it to your Etana IP address so that it is accessible from outside. For this please refer to your ISP router settings.
 
 Finally, create `~/.bash_profile` and add the following to it:
 
@@ -392,7 +392,7 @@ $ sudo crontab -e
 0 1 * * * sudo systemctl restart ipfs-daemon.service
 ```
 
-Finally, in order to get the content resolving faster, we experiment with keeping our Identity Boxes connected in a Swarm.
+Finally, in order to get the content resolving faster, we experiment with keeping our Etana Devicesconnected in a Swarm.
 If you want to learn more about, there is a good article: [How to Keep Your IPFS Nodes Connected to Ensure Fast Content Discovery](https://medium.com/pinata/how-to-keep-your-ipfs-nodes-connected-and-ensure-fast-content-discovery-7d92fb23da46).
 
 We first create a small bash script in `$HOME` named `keep-swarm-connected.sh`:
@@ -411,7 +411,7 @@ Make sure that the script is executable:
 $ chmod 755 keep-swarm-connected.sh
 ```
 
-We will be maintaining connection to our Virtual Identity Box that runs on AWS and `/ip4/35.180.235.71/tcp/4001/ipfs/QmabRgVvHEwweh9tUfCRnB6qqrB5GpLurE6zSQFxEqkjEq` is its multiaddress.
+We will be maintaining connection to our Virtual Etana that runs on AWS and `/ip4/35.180.235.71/tcp/4001/ipfs/QmabRgVvHEwweh9tUfCRnB6qqrB5GpLurE6zSQFxEqkjEq` is its multiaddress.
 
 Then we create a service, which will be triggered every minute in order to keep the connection active.
 We create file `sudo nano /lib/systemd/system/swarm-connector.service`:
@@ -459,13 +459,11 @@ and to see the status of its last execution:
 $ systemctl status swarm-connector
 ```
 
-Our virtual identity box also keeps the same kind of connection with other Identity Boxes.
-
-> We still explore. We do not know how many connections we will have to keep alive. We also consider creating a proper Identity Box service with more intelligence to keep connected what needs to be connected.
+> We still explore. We do not know how many connections we will have to keep alive. We also consider creating a proper Etana service with more intelligence to keep connected what needs to be connected.
 
 ## PM2
 
-We control Identity Box services using [pm2](https://pm2.keymetrics.io/):
+We control Etana's services using [pm2](https://pm2.keymetrics.io/):
 
 ```bash
 $ npm install pm2 -g
@@ -562,7 +560,7 @@ You need to register (buy) a domain name you want to use and make sure you have 
 IP address. You also have to make sure your router is configured appropriately so that the correct ports are open
 and mapped to your identity box. If you do not want to buy a domain name yet or your IP address changes often,
 you can try using services [http://noip.com/](http://noip.com/) or your preferred DynamicDNS solution.
-In the end, you need to have a url that resolves to your Identity Box.
+In the end, you need to have a url that resolves to your Etana.
 
 > Yes, this is all impossible to do for a regular user, but if you are reading this, you must know what you are doing.
 > We work hard to make this experience painless for the regular users that will decide to acquire the box from us.
@@ -653,7 +651,7 @@ $ cd ~/idbox/rendezvous
 $ pm2 start ecosystem.config.cjs
 ```
 
-At this point your Identity Box should be correctly set up and you can start experimenting with it.
+At this point your Etana should be correctly set up and you can start experimenting with it.
 
 ## Running services as a daemon
 
@@ -679,7 +677,7 @@ You can remove startup script at any time by running:
 $ pm2 unstartup systemd
 ```
 
-## Upgrading Identity Box Services
+## Upgrading Etana's Services
 
 For each service follow the steps (we use `box-office` below as an example):
 
@@ -700,11 +698,11 @@ without resorting to external, centralized services.
 The last version of `@identity-box/idservice` that uses Firebase is `0.1.23`.
 
 Because it uses Admin access (just for simplicity) this means, that if you want to build your own
-Identity Box, you need to have Admin access to our Firebase Project.
+Etana, you need to have Admin access to our Firebase Project.
 Obviously, we need to change that.
 
 To have Firebase working, we need to upload the `idbox-firebase.json` file to your Raspberry Pi.
-This file currently available to (trusted) contributors only and can be found on our Identity Box
+This file currently available to (trusted) contributors only and can be found on our Etana
 Keybase team share.
 
 Once you have the file on your Raspberry Pi, you need to add the following to `.bash_profile` file:
