@@ -66,8 +66,8 @@ IPFS normally runs on the device, but because the architecture is quite flexible
 
 Identity Service provides functionality allowing creating identity backups and restoring from backups. For this to work, Identity Service assumes existence of two environment variables:
 
-1. `IDBOX_BACKUP` holding the absolute path to the backup folder on your machine.
-2. `IDBOX_BACKUP_PASSWORD` holding the backup password.
+1. `ETANA_BACKUP` holding the absolute path to the backup folder on your machine.
+2. `ETANA_BACKUP_PASSWORD` holding the backup password.
 
 Please add these environment variables to your shell configuration file.
 
