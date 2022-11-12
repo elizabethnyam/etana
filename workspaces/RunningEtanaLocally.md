@@ -6,7 +6,7 @@ sortIndex: 20
 ---
 
 If you are a contributor, you will certainly like to be able to run the whole
-Identity Box ecosystem locally so that it is easier to test your changes.
+Etana ecosystem locally so that it is easier to test your changes.
 
 Our setup comprises of:
 
@@ -58,9 +58,9 @@ $ ipfs init
 $ ipfs daemon --enable-namesys-pubsub --enable-pubsub-experiment --enable-gc
 ```
 
-## Identity Box
+## Etana
 
-IPFS normally runs on the user's Identity Box, but because the architecture is quite flexible, we can easily separate IPFS and other services that run on the box. [Identity Service](/services/identity-service) and [Name Service](/services/nameservice) are two native services currently running on the Identity Box. To dispatch request to the right service, Identity Box uses [Box Office](/services/box-office) service. Finally, external connectivity is provided by the [Rendezvous](/services/rendezvous), which also supports secure communication between user's mobile and a web app running in a browser.
+IPFS normally runs on the device, but because the architecture is quite flexible, we can easily separate IPFS and other services that run on Etana. [Identity Service](/services/identity-service) and [Name Service](/services/nameservice) are two native services currently running on the Identity Box. To dispatch request to the right service, EtN uses [Box Office](/services/box-office) service. Finally, external connectivity is provided by the [Rendezvous](/services/rendezvous), which also supports secure communication between user's mobile and a web app running in a browser.
 
 ### Backups
 
@@ -147,7 +147,7 @@ You can then access Hush Hush at http://localhost:3000.
 
 ## Identity App
 
-To start Identity App, from `workspaces/idapp` run:
+To start 'Etana' App, from `workspaces/idapp` run:
 
 ```bash
 $ yarn start --clear
